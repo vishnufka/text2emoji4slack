@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<link rel="stylesheet" type="text/css" href="text2emoji.css">
+	<title>Text2Emoji</title>
+</head>
+<body>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<div>		
+
+					<h1>Text2Emoji (for Slack!)</h1>
+
+					<table>
+						<tr>
+							<td><label for="emoji">Emoji name:</label></td>
+							<td><input type="text" name="emoji" id="emoji"></td>
+							<td>e.g. joy, fire, smile, penguin</td>
+						</tr>
+
+						<tr>
+							<td><label for="whitespace">Whitespace name:</label></td>
+							<td><input type="text" name="whitespace" id="whitespace" value="blank"></td>
+							<td>blank recommended, follow <a href="https://get.slack.help/hc/en-us/articles/206870177-Create-custom-emoji">these instructions</a> to add <img src="blank.png" width="32" height="32"> to your slack emojis and call it blank</td>
+						</tr>
+
+						<tr>
+							<td><label for="input">Text to be converted:</label></td>
+							<td><input type="text" name="textToConvert" id="textToConvert"></td>
+							<td>currently supported characters are alphanumeric, space, and . ! ?</td>
+						</tr>
+
+						<tr>
+							<td><button class="btn btn-primary"onclick="onSubmitButtonClick()">Convert!</button></td>
+						</tr>
+					</table>
+
+					<textarea rows=20 cols=150 id='output'></textarea>
+
+					<!--<p id="current-characters">Current characters</p>-->
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script type='text/javascript' src='text2emoji.js'></script>
+</body>
+</html>
